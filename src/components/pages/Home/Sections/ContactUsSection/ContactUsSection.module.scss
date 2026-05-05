@@ -1,0 +1,10 @@
+@use "../../../../../styles/variables" as *;
+@use "../../../../../styles/mixins" as *;
+@use "../../../../../styles/reset" as *;
+@use "../../../../../styles/typography" as *;
+
+.contact_us {
+  width: 100%;
+  @include common-padding;
+  background-color: #f3f7fa;
+}
