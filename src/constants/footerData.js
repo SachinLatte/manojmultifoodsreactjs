@@ -13,15 +13,32 @@ export const quickLinks = [
   { label: "Contact Us", to: "/contact" },
 ];
 
+
 export const contactInfo = [
   {
     id: "address",
-    icon:FaLocationDot ,
+    icon: FaLocationDot,
+    label: "Address",
     text: "Q-4, APMC Market 2, Phase 2, Sector 19B, Vashi, Navi Mumbai, Maharashtra, 400703",
+    preLine: true
   },
-  { id: "phone", icon: MdPhone, text: "+91 22 4521 0999", href: "tel:+912245210999" },
-  { id: "email", icon: MdEmail, text: "info@manojmultifoods.com", href: "mailto:info@manojmultifoods.com" },
+  {
+    id: "phone",
+    icon: MdPhone,
+    label: "Call Us",
+    text: "+91 22 4521 0999",
+    href: "tel:+912245210999",
+  },
+  {
+    id: "email",
+    icon: MdEmail,
+    label: "Mail Us",
+    text: "info@manojmultifoods.com",
+    href: "mailto:info@manojmultifoods.com",
+  },
 ];
+
+
 
 export const socialLinks = [
   { id: "facebook", icon: FaFacebookF, href: "https://www.facebook.com/ManojMultifoods" },

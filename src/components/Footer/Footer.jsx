@@ -18,7 +18,7 @@ const Footer = () => (
             <QuickLinks links={quickLinks} />
           </div>
           <div className="col-md-4">
-            <ReachUs contacts={contactInfo} />
+            <ReachUs contacts={contactInfo} disablePreLine={true} />
           </div>
           <div className="col-md-4">
             <FollowUs socials={socialLinks} />

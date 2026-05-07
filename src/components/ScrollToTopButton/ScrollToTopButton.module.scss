@@ -1,24 +1,18 @@
-@use "../../styles/variables" as *;
-@use "../../styles/mixins" as *;
-@use "../../styles/reset" as *;
-@use "../../styles/typography" as *;
-
 .scrolltotopbtn {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: $secondary-color;
-    color: $white-color;
-    border: none;
-    padding: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 20px;
-    z-index: 1000;
-    width: 45px;
-    height: 45px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: $secondary-color;
+  color: $white-color;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 20px;
+  z-index: 1000;
+  width: 45px;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

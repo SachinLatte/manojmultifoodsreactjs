@@ -1,0 +1,42 @@
+.home_reach_us {
+  width: 100%;
+  padding-left: 75px;
+  h1 {
+    @include common-heading;
+    margin-bottom: 45px;
+  }
+  .footer_section {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    span {
+      background-color: $secondary-color;
+      width: 45px;
+      height: 45px;
+      border-radius: 50px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-right: 15px;
+      color: $white-color;
+      font-size: 18px;
+    }
+  }
+  h4 {
+    font-size: 21px;
+    font-family: $paragraph-font;
+    font-weight: 700;
+    color: $black-color;
+    margin-bottom: 5px;
+    display: block;
+  }
+  p,
+  a {
+    font-family: $paragraph-font;
+    font-size: 17px;
+    line-height: 28px;
+    color: $black-color;
+    font-weight: 500;
+  }
+}

@@ -1,6 +1,7 @@
 import home_video from "../../../assets/img/one.mp4";
 import styles from "./Home.module.scss";
 import ContactUsSection from "./Sections/ContactUsSection/ContactUsSection";
+import HomeAboutUs from "./Sections/HomeAboutUs/HomeAboutUs";
 
 import Homepagecarousel from "./Sections/HomeCarousel/Homepagecarousel";
 export default function Home() {
@@ -19,6 +20,7 @@ export default function Home() {
         </video>
         <Homepagecarousel />
       </section>
+      <HomeAboutUs />
       <ContactUsSection />
     </>
   );

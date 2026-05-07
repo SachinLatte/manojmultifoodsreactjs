@@ -1,7 +1,7 @@
 import React from "react";
 import ContactForm from "./ContactForm";
 import styles from "../ContactUsSection/ContactUsSection.module.scss";
-import ReachUs from "./ReachUs";
+import ReachUsHome from "./ReachUsHome";
 export default function ContactUsSection() {
   return (
     <>
@@ -12,7 +12,7 @@ export default function ContactUsSection() {
               <ContactForm />
             </div>
             <div className="col-md-6">
-              <ReachUs />
+              <ReachUsHome />
             </div>
           </div>
         </div>

@@ -1,3 +1,9 @@
+@mixin breakpoints($point) {
+  @media (max-width: $point) {
+    @content;
+  }
+}
+
 @mixin common-padding {
   padding: 6% 0;
 }
@@ -11,7 +17,7 @@
   font-size: 40px;
   text-transform: capitalize;
   color: $black-color;
-  font-weight: 600;
+  font-weight: 500;
   position: relative;
   padding-left: 10px;
 
@@ -21,44 +27,6 @@
 
   @include breakpoints(1280px) {
     padding-left: 10px;
-  }
-
-  &::before {
-    width: 5px;
-    height: 100%;
-    position: absolute;
-    background-color: $primary-color;
-    left: 0;
-    top: 0;
-    content: "";
-
-    @include breakpoints(1470px) {
-      width: 4px;
-      height: 85%;
-      top: 5px;
-      content: "";
-    }
-
-    @include breakpoints(1366px) {
-      width: 4px;
-      height: 60%;
-      top: 6px;
-      content: "";
-    }
-
-    @include breakpoints(1280px) {
-      top: 8px;
-      width: 3px;
-    }
-
-    @include breakpoints(1101px) {
-      height: 65%;
-      top: 5px;
-    }
-
-    @media (max-width: 768px) {
-      top: 6px;
-    }
   }
 
   @include breakpoints(1600px) {

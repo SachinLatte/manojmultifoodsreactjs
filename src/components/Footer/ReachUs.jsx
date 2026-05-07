@@ -1,9 +1,15 @@
 import { Link } from "react-router-dom";
 import styles from "../Footer/Footer.module.scss";
 
-const ReachUs = ({ contacts }) => (
-  <div className="footer-section">
-    <h3 className="footer-heading">Reach Us</h3>
+const ReachUs = ({
+  contacts,
+  showHeading = true,
+  showLabel = false,
+  className = "",
+  disablePreLine = false,
+}) => (
+  <div className={className}>
+    {showHeading && <h3 className="footer-heading">Reach Us</h3>}
     {contacts.map((item) => {
       const Icon = item.icon;
       return (
@@ -11,15 +17,24 @@ const ReachUs = ({ contacts }) => (
           key={item.id}
           className={`${styles.contact_item} d-flex align-items-center`}
         >
-          <span>
+          <span className={showLabel ? styles.icon_circle : ""}>
             <Icon />
           </span>
 
-          {item.href ? (
-            <Link to={item.href}>{item.text}</Link>
-          ) : (
-            <p>{item.text}</p>
-          )}
+          <div>
+            {showLabel && item.label && (
+              <h4 className={styles.contact_label}>{item.label}</h4>
+            )}
+            {item.href ? (
+              <Link to={item.href}>{item.text}</Link>
+            ) : !disablePreLine && item.preLine ? (
+              <p style={{ whiteSpace: "pre-line" }}>
+                {item.text.replace("Navi Mumbai,", "Navi Mumbai,\n")}
+              </p>
+            ) : (
+              <p>{item.text}</p>
+            )}
+          </div>
         </div>
       );
     })}
