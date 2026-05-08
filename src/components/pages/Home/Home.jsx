@@ -4,6 +4,7 @@ import ContactUsSection from "./Sections/ContactUsSection/ContactUsSection";
 import HomeAboutUs from "./Sections/HomeAboutUs/HomeAboutUs";
 
 import Homepagecarousel from "./Sections/HomeCarousel/Homepagecarousel";
+import WhatWeDoBest from "./Sections/WhatWeDoBest/WhatWeDoBest";
 export default function Home() {
   return (
     <>
@@ -21,6 +22,7 @@ export default function Home() {
         <Homepagecarousel />
       </section>
       <HomeAboutUs />
+      <WhatWeDoBest />
       <ContactUsSection />
     </>
   );

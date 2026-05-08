@@ -19,7 +19,6 @@
   color: $black-color;
   font-weight: 500;
   position: relative;
-  padding-left: 10px;
 
   @include breakpoints(1536px) {
     padding-left: 15px;
