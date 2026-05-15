@@ -75,32 +75,31 @@
 }
 
 @mixin common-button {
-  background-color: $primary-color;
-  color: $white-color;
-  font-family: $paragraph-font;
-  font-size: 16px;
-  padding: 8px 15px;
-  border-radius: 5px;
   display: inline-block;
+  vertical-align: middle;
+  -webkit-appearance: none;
+  border: none;
+  outline: none !important;
+  background-color: $black-color;
+  font-family: $heading-font;
+  padding: 12px 18px;
+  transition: 500ms;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.25;
   text-transform: capitalize;
-  font-weight: 500;
-  transition: all 0.2s ease-in-out;
-  border: 1px solid transparent;
-
+  border-radius: 100px;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.5s ease;
+  a {
+    color: $white-color;
+  }
   &:hover {
-    background-color: transparent;
-    color: $primary-color;
-    border: 1px solid $primary-color;
-    text-decoration: none;
-  }
-
-  @include breakpoints(1470px) {
-    font-size: 15px;
-  }
-
-  @include breakpoints(1366px) {
-    font-size: 15px;
-    padding: 6px 10px;
+    background-color: $secondary-color;
+    transition: all 0.5s ease;
   }
 }
 

@@ -1,6 +1,11 @@
 .what_we_do_best {
   width: 100%;
   background-color: #15152a;
+  background-image: url("../../../../../assets/img/service-bg-shape.png");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: 100% auto;
+  overflow-x: hidden;
   @include common-padding;
   h1 {
     @include common-heading;
@@ -15,6 +20,15 @@
     .project_single {
       .img_div {
         position: relative;
+        overflow: hidden;
+        border-radius: 8px;
+        &:hover img {
+          transform: scale(1.1);
+          transition: all 0.5s ease;
+        }
+        &:hover::before {
+          opacity: 1;
+        }
         &::before {
           position: absolute;
           bottom: 0;
@@ -83,6 +97,10 @@
             color: $primary-color;
             transform: rotate(45deg);
           }
+        }
+        img {
+          border-radius: 8px;
+          transition: all 0.5s ease;
         }
       }
     }

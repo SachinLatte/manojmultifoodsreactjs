@@ -1,0 +1,40 @@
+.home_reach_us {
+  width: 100%;
+  background-color: $primary-color;
+  @include common-padding;
+  h1 {
+    @include common-heading;
+    color: $white-color;
+    font-size: 55px;
+  }
+  p {
+    font-size: 18px;
+    font-family: $paragraph-font;
+    color: $secondary-color;
+    line-height: 30px;
+  }
+  img {
+    margin-top: 40px;
+  }
+  .network_content {
+    width: 100%;
+    padding-left: 5%;
+    p {
+      font-size: 19px;
+      font-family: $paragraph-font;
+      line-height: 40px;
+      color: $white-color;
+    }
+    button {
+      @include common-button;
+      background-color: $secondary-color;
+      margin-top: 40px;
+      a {
+        color: $black-color;
+      }
+      &:hover {
+        background-color: $white-color;
+      }
+    }
+  }
+}
