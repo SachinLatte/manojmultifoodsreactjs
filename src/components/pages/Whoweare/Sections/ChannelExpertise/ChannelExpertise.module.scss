@@ -1,0 +1,103 @@
+.channel_expertise_section {
+  width: 100%;
+  @include common-padding;
+  overflow: hidden;
+
+  h2 {
+    @include common-heading;
+    color: $white-color;
+    position: relative;
+    padding-bottom: 12px;
+    margin-bottom: 50px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 60px;
+      height: 3px;
+      background-color: $secondary-color;
+    }
+  }
+
+  .channels_grid {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+
+    // Handle center alignment if 5 items on larger screens
+    @media (min-width: 1200px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media (min-width: 1400px) {
+      grid-template-columns: repeat(3, 1fr);
+
+      // Make last two items center-aligned on very wide screens
+      & > :nth-child(4) {
+        grid-column-start: 1;
+        margin-left: 50%;
+        width: 100%;
+      }
+      & > :nth-child(5) {
+        grid-column-start: 2;
+        margin-left: 50%;
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 1199px) {
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    }
+
+    .channel_card {
+      background-color: #1e1e36;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 12px;
+      padding: 35px;
+      transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+
+      .card_header {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+
+        .number {
+          font-family: $heading-font;
+          font-size: 32px;
+          font-weight: 700;
+          color: $secondary-color;
+          line-height: 1;
+          letter-spacing: -1px;
+        }
+
+        h3 {
+          font-family: $heading-font;
+          font-size: 22px;
+          font-weight: 500;
+          color: $white-color;
+          margin: 0;
+        }
+      }
+
+      p {
+        @include common-para;
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 15px;
+        line-height: 24px;
+      }
+
+      &:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+        border-color: rgba(161, 203, 44, 0.4);
+        background-color: #242442;
+      }
+    }
+  }
+}

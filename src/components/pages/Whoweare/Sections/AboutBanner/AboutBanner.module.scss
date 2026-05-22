@@ -1,0 +1,92 @@
+.top_banner_who_we_are {
+  background: url("../../../../../assets/img/top-banners/about-main-top-img.webp")
+    no-repeat center center;
+}
+.common_top_section {
+  width: 100%;
+  height: 315px;
+  background-color: #212529b8;
+  padding-top: 175px;
+  position: relative;
+  &::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: #212529b8;
+    left: 0;
+    top: 0;
+  }
+  h1 {
+    @include common-heading;
+    font-size: 44px;
+    color: $white-color;
+    text-align: center;
+    font-weight: 500;
+    font-family: $paragraph-font;
+    position: relative;
+
+    @include breakpoints(768px) {
+      font-size: 36px;
+    }
+  }
+
+  .main_breadcrumbs {
+    position: absolute;
+    bottom: 20px;
+    .breadcrumb {
+      display: flex;
+      flex-wrap: wrap;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      gap: 10px;
+      align-items: center;
+
+      .breadcrumb_item {
+        font-family: $paragraph-font;
+        font-size: 16px;
+        font-weight: 500;
+        color: rgba(255, 255, 255, 0.7);
+        display: flex;
+        align-items: center;
+        gap: 10px;
+
+        a {
+          color: $white-color;
+          transition: all 0.3s ease;
+          position: relative;
+
+          &::after {
+            content: "";
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 1.5px;
+            background-color: $secondary-color;
+            transition: width 0.3s ease;
+          }
+
+          &:hover {
+            color: $secondary-color;
+            &::after {
+              width: 100%;
+            }
+          }
+        }
+
+        & + .breadcrumb_item::before {
+          content: "/";
+          color: rgba(255, 255, 255, 0.4);
+          font-size: 14px;
+        }
+
+        &.active {
+          color: $secondary-color;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+}
